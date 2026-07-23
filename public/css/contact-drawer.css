@@ -1,0 +1,328 @@
+.mwm-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 22, 51, 0.7);
+    z-index: 10000;
+}
+
+.mwm-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 460px;
+    background: #f7f7f7;
+    z-index: 10001;
+    overflow-y: auto;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.25);
+    color: #091633;
+}
+
+.mwm-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 0;
+    color: #091633;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mwm-close:hover,
+.mwm-close:focus-visible {
+    color: #FF1493;
+}
+
+.mwm-drawer__inner {
+    padding: 56px 32px 40px;
+}
+
+.mwm-drawer__title {
+    font-family: 'Spantaran', 'Raleway', sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    margin: 0 0 10px;
+    color: #091633;
+}
+
+.mwm-drawer__lede {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4a5570;
+    margin: 0 0 24px;
+}
+
+.mwm-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #e3e6ec;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: #091633;
+    transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.mwm-card:hover,
+.mwm-card:focus-visible {
+    border-color: #FF1493;
+    transform: translateY(-1px);
+}
+
+/* When the card is rendered as a <button> (email reveal trigger), strip the
+   default button chrome so it matches the <a> variant pixel-for-pixel. */
+.mwm-card--button {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mwm-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 20, 147, 0.12);
+    color: #FF1493;
+    flex: 0 0 auto;
+}
+
+.mwm-card__body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.mwm-card__title {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.mwm-card__meta {
+    font-size: 12px;
+    color: #6b7488;
+    margin-top: 2px;
+}
+
+.mwm-or {
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+    color: #98a0b3;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.mwm-or::before,
+.mwm-or::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #d6dae3;
+}
+
+.mwm-or span {
+    padding: 0 10px;
+}
+
+.mwm-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Honeypot — off-screen, kept in the DOM so bots fill it; never shown to users. */
+.mwm-hp {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.mwm-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: #4a5570;
+}
+
+.mwm-field__label {
+    font-weight: 600;
+}
+
+.mwm-field__hint {
+    font-weight: 400;
+    color: #98a0b3;
+}
+
+.mwm-field input,
+.mwm-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #d6dae3;
+    border-radius: 6px;
+    font: inherit;
+    color: #091633;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.mwm-field textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.mwm-field input:focus,
+.mwm-field textarea:focus {
+    outline: none;
+    border-color: #FF1493;
+    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.18);
+}
+
+.mwm-field input[aria-invalid='true'],
+.mwm-field textarea[aria-invalid='true'] {
+    border-color: #d3194d;
+    background: #fff5f8;
+}
+
+.mwm-field__err {
+    color: #c00040;
+    font-size: 12px;
+}
+
+.mwm-turnstile {
+    min-height: 65px;
+}
+
+.mwm-submit {
+    margin-top: 6px;
+    padding: 12px 22px;
+    background: #FF1493;
+    color: #ffffff;
+    border: 0;
+    border-radius: 6px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter 150ms ease, transform 150ms ease;
+}
+
+.mwm-submit:hover:not(:disabled),
+.mwm-submit:focus-visible:not(:disabled) {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.mwm-submit:disabled {
+    opacity: 0.7;
+    cursor: progress;
+}
+
+.mwm-form__error {
+    background: #fff0f3;
+    border: 1px solid #f5b1bf;
+    color: #c00040;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.mwm-success {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mwm-success h3 {
+    font-family: 'Spantaran', 'Raleway', sans-serif;
+    font-size: 22px;
+    margin: 0 0 8px;
+    color: #091633;
+}
+
+.mwm-success p {
+    color: #4a5570;
+    font-size: 14px;
+    margin: 0 0 18px;
+}
+
+/* Transitions */
+.mwm-fade-enter-active,
+.mwm-fade-leave-active {
+    transition: opacity 300ms ease;
+}
+.mwm-fade-enter-from,
+.mwm-fade-leave-to {
+    opacity: 0;
+}
+
+.mwm-slide-enter-active,
+.mwm-slide-leave-active {
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mwm-slide-enter-from,
+.mwm-slide-leave-to {
+    transform: translateX(100%);
+}
+
+@media (max-width: 575px) {
+    .mwm-drawer__inner {
+        padding: 56px 22px 32px;
+    }
+    .mwm-drawer__title {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mwm-slide-enter-active,
+    .mwm-slide-leave-active,
+    .mwm-fade-enter-active,
+    .mwm-fade-leave-active {
+        transition-duration: 0.01ms;
+    }
+}
+
+/* --- Vanilla open/close (replaces Vue <transition>). The drawer + backdrop are
+   always in the DOM; toggling body.mwm-contact-open slides them in/out. --- */
+.mwm-backdrop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+}
+body.mwm-contact-open .mwm-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+.mwm-drawer {
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 400ms;
+}
+body.mwm-contact-open .mwm-drawer {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+    .mwm-backdrop, .mwm-drawer { transition: none; }
+}

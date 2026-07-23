@@ -1,0 +1,84 @@
+{# Slide-out contact drawer — same layout/fields as the moonwhale.media drawer.
+   The email address is NOT written in the HTML; it's split into parts and
+   assembled client-side only after the visitor clicks "Show email address"
+   (anti-scraping). Behaviour lives in public/js/contact-drawer.js. #}
+<div class="mwm-backdrop" data-mwm-close aria-hidden="true"></div>
+
+<aside class="mwm-drawer" role="dialog" aria-modal="true" aria-labelledby="mwm-drawer-title" aria-hidden="true">
+    <button type="button" class="mwm-close" aria-label="Close contact form" data-mwm-close>&times;</button>
+
+    <div class="mwm-drawer__inner">
+        <h2 id="mwm-drawer-title" class="mwm-drawer__title">Contact Us</h2>
+        <p class="mwm-drawer__lede">
+            Booking inquiries, press, or just want to reach out? Send us a message and we'll get back to you.
+        </p>
+
+        <button type="button" class="mwm-card mwm-card--button" id="mwm-email-reveal"
+                data-email-user="info" data-email-host="moonwhale.media">
+            <span class="mwm-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+            </span>
+            <span class="mwm-card__body">
+                <span class="mwm-card__title">Show email address</span>
+                <span class="mwm-card__meta">Click to reveal</span>
+            </span>
+        </button>
+
+        <div class="mwm-or" aria-hidden="true"><span>OR</span></div>
+
+        <div class="mwm-success" id="mwm-success" role="status" aria-live="polite" hidden>
+            <h3>Thanks &mdash; message received.</h3>
+            <p>We'll get back to you within one business day.</p>
+            <button type="button" class="mwm-submit" data-mwm-close>Close</button>
+        </div>
+
+        <form class="mwm-form" id="mwm-form" novalidate>
+            <div class="mwm-form__error" id="mwm-form-error" role="alert" hidden></div>
+
+            <div class="mwm-hp" aria-hidden="true">
+                <label>Leave this field empty
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                </label>
+            </div>
+
+            <label class="mwm-field">
+                <span class="mwm-field__label">First Name</span>
+                <input name="first_name" type="text" autocomplete="given-name" required />
+                <span class="mwm-field__err" data-err-for="first_name" hidden></span>
+            </label>
+
+            <label class="mwm-field">
+                <span class="mwm-field__label">Last Name</span>
+                <input name="last_name" type="text" autocomplete="family-name" required />
+                <span class="mwm-field__err" data-err-for="last_name" hidden></span>
+            </label>
+
+            <label class="mwm-field">
+                <span class="mwm-field__label">Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+                <span class="mwm-field__err" data-err-for="email" hidden></span>
+            </label>
+
+            <label class="mwm-field">
+                <span class="mwm-field__label">Phone Number <span class="mwm-field__hint">(optional)</span></span>
+                <input name="phone" type="tel" autocomplete="tel" />
+                <span class="mwm-field__err" data-err-for="phone" hidden></span>
+            </label>
+
+            <label class="mwm-field">
+                <span class="mwm-field__label">TELL US MORE</span>
+                <textarea name="message" rows="5" required></textarea>
+                <span class="mwm-field__err" data-err-for="message" hidden></span>
+            </label>
+
+            {% if turnstile_site_key %}
+                <div class="mwm-turnstile" id="mwm-turnstile"></div>
+            {% endif %}
+
+            <button type="submit" class="mwm-submit" id="mwm-submit">Submit</button>
+        </form>
+    </div>
+</aside>

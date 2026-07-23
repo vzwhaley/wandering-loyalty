@@ -1,0 +1,193 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <!-- Page Title ============================================= -->
+        <section id="page-title" class="page-title-parallax page-title-dark page-title-left"
+                 style="padding: 250px 0; background-image: url({{ asset('images/wandering-loyalty/1920x1080_guitar_mic_2.jpg') }}); background-size: cover; background-position: center center;"
+                 data-bottom-top="background-position:0px 440px;" data-top-bottom="background-position:0px -500px;">
+
+            <div class="container clearfix">
+                <h1>DISCOGRAPHY</h1>
+                <span></span>
+            </div>
+
+        </section><!-- #page-title end -->
+
+        <!-- Content ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <div class="col_one_third nobottommargin">
+                        <div class="feature-box media-box">
+                            <div class="fbox-media">
+                                <a href="#">
+                                    <img src="{{ asset('images/wandering-loyalty/500x500_Hope_&_Fire_Front_Cover.jpg') }}"
+                                         alt="Wandering Loyalty - Hope & Fire" data-toggle="modal" data-target="#modal1"></a>
+                                <p style="text-align: center;">Click to Enlarge Front Cover</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content" style="width:700px;height:800px;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Wandering Loyalty - Hope &amp; Fire Front Cover</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('images/wandering-loyalty/500x500_Hope_&_Fire_Front_Cover.jpg') }}"
+                                         alt="Wandering Loyalty - Hope & Fire" style="width:650px;height:650px;">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third nobottommargin">
+                        <div class="feature-box media-box">
+                            <div class="fbox-desc" style="margin:0 auto; text-align:center;">
+                                <h3 style="color:#007bff;">DEBUT ALBUM</h3>
+                                <h3>Hope &amp; Fire
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '01-wandering-loyalty'}) }}">
+                                            1. Wandering Loyalty
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '02-along-the-nashville-mile'}) }}">
+                                            2. Along The Nashville Mile
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '03-how-many-ways'}) }}">
+                                            3. How Many Ways
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '04-closer-to-home'}) }}">
+                                            4. Closer To Home
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '05-still-unbroken'}) }}">
+                                            5. Still Unbroken
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '06-secrecy-and-betrayal'}) }}">
+                                            6. Secrecy &amp; Betrayal
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '07-let-them-fade'}) }}">
+                                            7. Let Them Fade
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '08-rising-from-the-ashes'}) }}">
+                                            8. Rising From The Ashes
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '09-eyes-to-my-soul'}) }}">
+                                            9. Eyes To My Soul
+                                        </a>
+                                    </span>
+                                    <span class="subtitle">
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '10-hope-and-fire'}) }}">
+                                            10 Hope &amp; Fire
+                                        </a>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third nobottommargin col_last">
+                        <div class="feature-box media-box">
+                            <div class="fbox-media">
+                                <a href="#">
+                                    <img src="{{ asset('images/wandering-loyalty/500x500_Hope_&_Fire_Back_Cover.jpg') }}"
+                                     alt="Wandering Loyalty - Hope & Fire" data-toggle="modal" data-target="#modal2"></a>
+                                    <p style="text-align: center;">Click to Enlarge Back Cover</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content" style="width:700px;height:800px;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Wandering Loyalty - Hope &amp; Fire Back Cover</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ asset('images/wandering-loyalty/500x500_Hope_&_Fire_Back_Cover.jpg') }}"
+                                         alt="Wandering Loyalty - Hope & Fire" style="width:650px;height:650px;">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+
+    {% block script %}
+<script type="application/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="{{ asset('js/functions.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION ADDONS  -->
+    {#<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.revealer.min.js') }}"></script>#}
+    <script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.particles.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS  -->
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}"></script>
+    </script>
+    {% endblock %}
+
+{% endblock %}

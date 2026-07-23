@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Page Title ============================================= -->
+    <section id="page-title" class="page-title-parallax page-title-dark page-title-left"
+             style="
+                     padding: 250px 0;
+                     background-image: url({{ asset('images/wandering-loyalty/1920x1220_light_in_forest.jpg') }});
+                     background-size: cover;
+                     background-position: center center;"
+             data-bottom-top="background-position:0px 390px;" data-top-bottom="background-position:0px -500px;"
+             xmlns="http://www.w3.org/1999/html">
+
+        <div class="container clearfix" style="z-index: 5; white-space: normal;
+                                 font-size: 70px; line-height: 50px; font-weight: 900; color: #ffffff;
+                                 font-family:Quicksand; text-shadow: 10px 10px 10px #000;">
+            <h1>Closer To Home</h1>
+            <span style="color: #ffffff; font-weight: bold; font-style: italic;">Hope &amp; Fire (2020)</span>
+            <span style="color: #ffffff; font-weight: bold;">Jay Lee Ramsey - Lead Guitar and Vocals</span>
+            <span style="color: #ffffff; font-weight: bold;">Vincent Z. Whaley - Lyrics and Rhythm Guitar</span>
+            <span style="color: #ffffff; font-weight: bold;">Christine Hollifield Hughes - Harmonica</span>
+            <span style="color: #ffffff; font-weight: bold;">John Skinner - Bass Guitar</span>
+            <span style="color: #ffffff; font-weight: bold;">Jason Gross - Percussion</span>
+            <span style="color: #ffffff; font-weight: bold;">Jonathan Franklin - Violin</span>
+        </div>
+
+    </section><!-- #page-title end -->
+
+    <!-- Content ============================================= -->
+    <section id="content">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+
+                <div class="footer-widgets-wrap clearfix"
+                     style="margin: 0 auto; text-align: center; padding-bottom:25px;">
+
+                    <p style="font-family:Quicksand; font-size: 27px;">Closer To Home</p>
+                    <iframe src="{{ asset('music/silence.mp3') }}" type="audio/mp3" allow="autoplay" id="audio"
+                            style="display:none"></iframe>
+                    <audio id="audio-player" autoplay controls controlsList="nodownload">
+                        {#                        <source src="" type="audio/ogg">#}
+                        <source src="{{ asset('music/04_Closer_To_Home.mp3') }}" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p style="margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights Reserved by Wandering
+                        Loyalty and Moon Whale Media Recordings</p>
+
+                </div>
+
+                <div class="nobottommargin">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media" style="margin: 0 auto; text-align: center;">
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Snow it falls hard again,<br/>
+                                Icy dreams in the wind.<br/>
+                                Winter crosses my path,<br/>
+                                Tempest will bring the wrath.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                I am closer to home,<br/>
+                                No matter where I roam.<br/>
+                                I am closer to home,<br/>
+                                I never feel alone.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Winding down this long road,<br/>
+                                Desiring a warm blaze.<br/>
+                                My thoughts halt to explode,<br/>
+                                Wandering this life’s maze.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                I am closer to home,<br/>
+                                No matter where I roam.<br/>
+                                I am closer to home,<br/>
+                                I never feel alone.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Brave the storm together,<br/>
+                                With those you trust and love.<br/>
+                                Keep them close forever,<br/>
+                                Remember those above.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                I am closer to home,<br/>
+                                No matter where I roam.<br/>
+                                I am closer to home,<br/>
+                                I never feel alone.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">I am closer to home.</p>
+                            <p style="color:#333; margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights
+                                Reserved by Wandering
+                                Loyalty and Moon Whale Media Recordings</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+{% block script %}
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="{{ asset('js/functions.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION ADDONS  -->
+    {#<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.revealer.min.js') }}"></script>#}
+    <script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.particles.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS  -->
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}"></script>
+    </script>
+        {% endblock %}
+
+{% endblock %}

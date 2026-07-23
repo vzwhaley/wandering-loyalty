@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- Page Title ============================================= -->
+<section id="page-title" class="page-title-parallax page-title-dark page-title-left"
+         style="padding: 250px 0; background-image: url({{ asset('images/wandering-loyalty/1920x1280_library_skulls.jpg') }});
+                 background-size: cover; background-position: center center;"
+         data-bottom-top="background-position:0px 440px;" data-top-bottom="background-position:0px -500px;">
+
+    <div class="container clearfix">
+        <h1>MERCH</h1>
+        <span></span>
+    </div>
+
+</section><!-- #page-title end -->
+
+<!-- Content ============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+
+            <div class="card">
+                <!-- Default panel contents -->
+                <div class="card-header"
+                     style="color:#6699ff;font-size:22px;font-weight:bold;background-color: #000033;">MERCH
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="font-size:16px;font-weight:bold;color:#0E76A8;">
+                        COMING SOON!
+                    </p>
+                </div>
+
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+</section><!-- #content end -->
+
+{% block script %}
+<!-- External JavaScripts
+============================================= -->
+<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/plugins.js') }}"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="{{ asset('js/functions.js') }}"></script>
+
+<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+<script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+<!-- SLIDER REVOLUTION ADDONS  -->
+{#<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.revealer.min.js') }}"></script>#}
+<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.particles.min.js') }}"></script>
+<!-- SLIDER REVOLUTION EXTENSIONS  -->
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+<script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}"></script>
+</script>
+{% endblock %}
+
+{% endblock %}

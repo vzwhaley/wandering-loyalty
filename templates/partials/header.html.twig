@@ -1,0 +1,147 @@
+<!-- Header
+        ============================================= -->
+<header id="header" class="transparent-header full-header dark">
+
+    <div id="header-wrap">
+
+        <div class="container clearfix">
+
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i>MENU</div>
+
+            <!-- Logo
+            ============================================= -->
+            <div id="logo" style="border: 0 !important;">
+                <a href="{{ path('home') }}" class="standard-logo"
+                   data-dark-logo="{{ asset('images/wandering-loyalty/Logo_Wandering_Loyalty_Main.png') }}">
+                    <img src="{{ asset('images/wandering-loyalty/Logo_Wandering_Loyalty_Main.png') }}"
+                         alt="Wandering Loyalty"></a>
+                <a href="{{ path('home') }}" class="retina-logo"
+                   data-dark-logo="{{ asset('images/wandering-loyalty/Logo_Wandering_Loyalty_Main.png') }}">
+                    <img src="{{ asset('images/wandering-loyalty/Logo_Wandering_Loyalty_Main.png') }}"
+                            alt="Wandering Loyalty"></a>
+            </div><!-- #logo end -->
+
+            <!-- Primary Navigation
+            ============================================= -->
+            <nav id="primary-menu">
+
+                <ul style="border: 0 !important;">
+                    <li><a href="{{ path('home') }}" {% if page == 'home' %}style="color:#007bff;"{% endif %}>
+                            <div>Home</div>
+                        </a>
+                    </li>
+                    <li><a href="{{ path('discography') }}" {% if page == 'discography' %}style="color:#007bff;"{% endif %}>
+                            <div>Discography</div>
+                        </a>
+                        <ul>
+                            <li><a href="{{ path('discography') }}"><div>Full Discography</div></a></li>
+                            <li><a href="{{ path('discography') }}"><div>Hope &amp; Fire</div></a>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('discography_song', {album: 'hope-and-fire', song: '01-wandering-loyalty'}) }}">
+                                            <div>1. Wandering Loyalty</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '02-along-the-nashville-mile'}) }}">
+                                            <div>2. Along The Nashville Mile</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '03-how-many-ways'}) }}">
+                                            <div>3. How Many Ways</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '04-closer-to-home'}) }}">
+                                            <div>4. Closer To Home</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '05-still-unbroken'}) }}">
+                                            <div>5. Still Unbroken</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '06-secrecy-and-betrayal'}) }}">
+                                            <div>6. Secrecy &amp; Betrayal</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '07-let-them-fade'}) }}">
+                                            <div>7. Let Them Fade</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '08-rising-from-the-ashes'}) }}">
+                                            <div>8. Rising From The Ashes</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '09-eyes-to-my-soul'}) }}">
+                                            <div>9. Eyes To My Soul</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('discography_song',
+                                            {'album': 'hope-and-fire', 'song': '10-hope-and-fire'}) }}">
+                                            <div>10. Hope &amp; Fire</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('musicians') }}" {% if page == 'musicians' %}style="color:#007bff;"{% endif %}>
+                            <div>Musicians</div>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'jay' }) }}">Jay Lee Ramsey</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'vincent' }) }}">Vincent Z. Whaley</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'skinner' }) }}">John Skinner</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'jason' }) }}">Jason Gross</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'chris' }) }}">Christine Hollifield Hughes</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('musicians', { '_fragment': 'shannon' }) }}">Shannon Frazier</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('tour') }}" {% if page == 'tour' %}style="color:#007bff;"{% endif %}>
+                            <div>Tour</div>
+                        </a>
+                    </li>
+                    <li><a href="{{ path('merch') }}" {% if page == 'merch' %}style="color:#007bff;"{% endif %}>
+                            <div>Merch</div>
+                        </a>
+                    </li>
+                    <li><a href="#" data-open-contact-drawer>
+                            <div>Contact</div>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav><!-- #primary-menu end -->
+
+        </div>
+
+    </div>
+
+</header><!-- #header end -->

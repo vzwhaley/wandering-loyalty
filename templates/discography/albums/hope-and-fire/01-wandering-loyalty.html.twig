@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Page Title ============================================= -->
+    <section id="page-title" class="page-title-parallax page-title-dark page-title-left"
+             style="padding: 250px 0; background-image: url({{ asset('images/wandering-loyalty/1920x1440_michelle_bell_acoustic_creek.jpg') }}); background-size: cover; background-position: center center;"
+             data-bottom-top="background-position:0px 440px;" data-top-bottom="background-position:0px -500px;">
+
+        <div class="container clearfix" style="z-index: 5; white-space: normal;
+                                 font-size: 70px; line-height: 50px; font-weight: 900; color: #ffffff;
+                                 font-family:Quicksand; text-shadow: 10px 10px 10px #000;">
+            <h1>Wandering Loyalty</h1>
+            <span style="color: #ffffff; font-weight: bold; font-style: italic;">Hope &amp; Fire (2020)</span>
+            <span style="color: #ffffff; font-weight: bold;">Written and Arranged By</span>
+            <span style="color: #ffffff; font-weight: bold;">Jay Lee Ramsey</span>
+        </div>
+
+    </section><!-- #page-title end -->
+
+    <!-- Content ============================================= -->
+    <section id="content">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+
+                <div class="footer-widgets-wrap clearfix"
+                     style="margin: 0 auto; text-align: center; padding-bottom:25px;">
+
+                    <p style="font-family:Quicksand; font-size: 27px;">Wandering Loyalty</p>
+                    <iframe src="{{ asset('music/silence.mp3') }}" type="audio/mp3" allow="autoplay" id="audio"
+                            style="display:none"></iframe>
+                    <audio id="audio-player" autoplay controls controlsList="nodownload">
+                        {#                        <source src="" type="audio/ogg">#}
+                        <source src="{{ asset('music/01_Wandering_Loyalty.mp3') }}" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p style="margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights Reserved by Wandering
+                        Loyalty and Moon Whale Media Recordings</p>
+
+                </div>
+
+                <div class="nobottommargin">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <h4>In the winter of 2018 following many weeks of writing original material for their debut
+                                album, <span style="font-style: italic;">Hope &amp; Fire</span>, Vincent asked Jay to
+                                write a guitar acoustic instrumental that
+                                would serve as the first song of the album.</h4>
+                            <h4>"See if you can write us something in the feel of "Bron-Yr-Aur" by Jimmy Page on Led
+                                Zeppelin's <span style="font-style: italic;">Physical Graffiti</span> album," Vincent
+                                said to Jay.</h4>
+                            <h4>Needless to say, Jay came through in flying colors with this beautiful guitar acoustic
+                                instrumental that they ultimately titled in honor of the band.</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+{% block script %}
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="{{ asset('js/functions.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION ADDONS  -->
+    {#<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.revealer.min.js') }}"></script>#}
+    <script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.particles.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS  -->
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}"></script>
+    </script>
+        {% endblock %}
+
+{% endblock %}

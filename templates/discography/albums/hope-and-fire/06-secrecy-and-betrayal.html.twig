@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Page Title ============================================= -->
+    <section id="page-title" class="page-title-parallax page-title-dark page-title-left"
+             style="
+                     padding: 250px 0;
+                     background-image: url({{ asset('images/wandering-loyalty/1920x1080_skull_quill_books.jpg') }});
+                     background-size: cover;
+                     background-position: center center;"
+             data-bottom-top="background-position:0px 390px;" data-top-bottom="background-position:0px -500px;"
+             xmlns="http://www.w3.org/1999/html">
+
+        <div class="container clearfix" style="z-index: 5; white-space: normal;
+                                 font-size: 70px; line-height: 50px; font-weight: 900; color: #ffffff;
+                                 font-family:Quicksand; text-shadow: 10px 10px 10px #000;">
+            <h1>Secrecy &amp; Betrayal</h1>
+            <span style="color: #ffffff; font-weight: bold; font-style: italic;">Hope &amp; Fire (2020)</span>
+            <span style="color: #ffffff; font-weight: bold;">Jay Lee Ramsey - Lead Guitar and Vocals</span>
+            <span style="color: #ffffff; font-weight: bold;">Vincent Z. Whaley - Lyrics and Rhythm Guitar</span>
+            <span style="color: #ffffff; font-weight: bold;">John Skinner - Bass Guitar</span>
+            <span style="color: #ffffff; font-weight: bold;">Jason Gross - Percussion</span>
+            <span style="color: #ffffff; font-weight: bold;">Jonathan Franklin - Violin</span>
+        </div>
+
+    </section><!-- #page-title end -->
+
+    <!-- Content ============================================= -->
+    <section id="content">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+
+                <div class="footer-widgets-wrap clearfix"
+                     style="margin: 0 auto; text-align: center; padding-bottom:25px;">
+
+                    <p style="font-family:Quicksand; font-size: 27px;">Secrecy &amp; Betrayal</p>
+
+                    <div class="footer-widgets-wrap clearfix"
+                         style="margin: 0 auto; text-align: center; padding-bottom:25px;">
+
+                        <iframe src="{{ asset('music/silence.mp3') }}" type="audio/mp3" allow="autoplay" id="audio"
+                                style="display:none"></iframe>
+                        <audio id="audio-player" autoplay controls controlsList="nodownload">
+                            <source src="" type="audio/ogg">
+                            <source src="{{ asset('music/06_Secrecy_&_Betrayal.mp3') }}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p style="margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights Reserved by Wandering
+                            Loyalty and Moon Whale Media Recordings</p>
+
+                    </div>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BlHR5zfqMYo" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+{#                    <iframe src="{{ asset('music/silence.mp3') }}" type="audio/mp3" allow="autoplay" id="audio"#}
+{#                            style="display:none"></iframe>#}
+{#                    <audio id="audio-player" autoplay controls controlsList="nodownload">#}
+{#                        #}{#                        <source src="" type="audio/ogg">#}
+{#                        <source src="{{ asset('music/06_Secrecy_&_Betrayal.mp3') }}" type="audio/mp3">#}
+{#                        Your browser does not support the audio element.#}
+{#                    </audio>#}
+                    <p style="margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights Reserved by Wandering
+                        Loyalty and Moon Whale Media Recordings</p>
+
+                </div>
+
+                <div class="nobottommargin">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media" style="margin: 0 auto; text-align: center;">
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                All of your lies,<br/>
+                                You lived them all.<br/>
+                                All of my sighs,<br/>
+                                You chose to stall.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Secrecy and betrayal,<br/>
+                                When they set sail, lift up the veil.<br/>
+                                Secrecy and betrayal,<br/>
+                                When they’re dead, they tell no tales.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Showed no respect,<br/>
+                                For my blue heart,<br/>
+                                Used with deflect,<br/>
+                                You played your part.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Secrecy and betrayal,<br/>
+                                When they set sail, lift up the veil.<br/>
+                                Secrecy and betrayal,<br/>
+                                When they’re dead, they tell no tales.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Longing for trust,<br/>
+                                I thought I knew,<br/>
+                                Your secrets scarred,<br/>
+                                Me like so few.
+                            </p>
+                            <p style="font-family:Quicksand; font-size: 18px; color:#333;">
+                                Secrecy and betrayal,<br/>
+                                When they set sail, lift up the veil.<br/>
+                                Secrecy and betrayal,<br/>
+                                When they’re dead, they tell no tales.
+                            </p>
+                            <p style="color:#333; margin-top:35px;">Copyright &copy; {{ "now"|date("Y") }} All Rights
+                                Reserved by Wandering
+                                Loyalty and Moon Whale Media Recordings</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
+
+{% block script %}
+    <!-- External JavaScripts
+    ============================================= -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="{{ asset('js/functions.js') }}"></script>
+
+    <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION ADDONS  -->
+    {#<script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.revealer.min.js') }}"></script>#}
+    <script src="{{ asset('include/rs-plugin/js/addons/revolution.addon.particles.min.js') }}"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS  -->
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('include/rs-plugin/js/extensions/revolution.extension.video.min.js') }}"></script>
+    </script>
+        {% endblock %}
+
+{% endblock %}
