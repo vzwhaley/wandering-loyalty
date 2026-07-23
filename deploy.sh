@@ -54,7 +54,7 @@ rsync -az --omit-dir-times --no-perms --no-owner --no-group --human-readable --d
   ./ "$SSH_HOST:$REMOTE_ROOT/"
 
 say "Normalizing public/ permissions on server"
-ssh "$SSH_HOST" "chmod -R a+rX '$REMOTE_ROOT/public'"
+ssh "$SSH_HOST" "chmod -R a+rX '$REMOTE_ROOT/public' 2>/dev/null || true"
 
 if [ "${SKIP_REMOTE:-0}" = "1" ]; then
   reset_opcache
